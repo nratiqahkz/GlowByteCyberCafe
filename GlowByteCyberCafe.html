@@ -267,21 +267,6 @@ cat > /home/claude/glowbyte.html << 'HTMLEOF'
     box-shadow: 0 12px 40px rgba(255,95,191,0.12);
   }
 
-  .gallery-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.gallery-card:hover img {
-    transform: scale(1.05);
-}
-
-.gallery-card img {
-    transition: transform 0.3s ease;
-}
-
   /* Ambient glow fill per card */
   .gallery-card::before {
     content: '';
@@ -566,36 +551,103 @@ cat > /home/claude/glowbyte.html << 'HTMLEOF'
       <div>
         <div class="inside-eyebrow">Inside GlowByte</div>
         <h2 class="inside-headline">A small space,<br>laid out with intent.</h2>
-      </div> 
+      </div>
     </div>
 
     <div class="gallery-grid">
 
       <!-- Card 1 – Main Hall -->
       <div class="gallery-card gc-pink">
-        <img src="images/mainhall.png" alt="Main Hall">
-
-        <div class="gallery-caption">
-        Main hall — 10 stations
+        <div class="gallery-card-art">
+          <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+            <!-- desk row 1 -->
+            <rect x="20" y="30" width="34" height="20" rx="3" fill="none" stroke="rgba(255,95,191,0.5)" stroke-width="1.5"/>
+            <rect x="25" y="33" width="24" height="14" rx="2" fill="rgba(255,95,191,0.08)"/>
+            <rect x="62" y="30" width="34" height="20" rx="3" fill="none" stroke="rgba(255,95,191,0.5)" stroke-width="1.5"/>
+            <rect x="67" y="33" width="24" height="14" rx="2" fill="rgba(255,95,191,0.08)"/>
+            <rect x="104" y="30" width="34" height="20" rx="3" fill="none" stroke="rgba(255,95,191,0.5)" stroke-width="1.5"/>
+            <rect x="109" y="33" width="24" height="14" rx="2" fill="rgba(255,95,191,0.08)"/>
+            <rect x="146" y="30" width="34" height="20" rx="3" fill="none" stroke="rgba(255,95,191,0.5)" stroke-width="1.5"/>
+            <rect x="151" y="33" width="24" height="14" rx="2" fill="rgba(255,95,191,0.08)"/>
+            <!-- desk row 2 -->
+            <rect x="20" y="80" width="34" height="20" rx="3" fill="none" stroke="rgba(185,103,255,0.5)" stroke-width="1.5"/>
+            <rect x="25" y="83" width="24" height="14" rx="2" fill="rgba(185,103,255,0.08)"/>
+            <rect x="62" y="80" width="34" height="20" rx="3" fill="none" stroke="rgba(185,103,255,0.5)" stroke-width="1.5"/>
+            <rect x="67" y="83" width="24" height="14" rx="2" fill="rgba(185,103,255,0.08)"/>
+            <rect x="104" y="80" width="34" height="20" rx="3" fill="none" stroke="rgba(185,103,255,0.5)" stroke-width="1.5"/>
+            <rect x="109" y="83" width="24" height="14" rx="2" fill="rgba(185,103,255,0.08)"/>
+            <rect x="146" y="80" width="34" height="20" rx="3" fill="none" stroke="rgba(185,103,255,0.5)" stroke-width="1.5"/>
+            <rect x="151" y="83" width="24" height="14" rx="2" fill="rgba(185,103,255,0.08)"/>
+            <!-- glow dots -->
+            <circle cx="37" cy="40" r="2.5" fill="rgba(255,95,191,0.8)"/>
+            <circle cx="79" cy="40" r="2.5" fill="rgba(255,95,191,0.8)"/>
+            <circle cx="121" cy="40" r="2.5" fill="rgba(185,103,255,0.8)"/>
+            <circle cx="163" cy="40" r="2.5" fill="rgba(185,103,255,0.8)"/>
+            <!-- walkway line -->
+            <line x1="10" y1="60" x2="190" y2="60" stroke="rgba(255,255,255,0.06)" stroke-width="1" stroke-dasharray="4,4"/>
+            <!-- ambient glow -->
+            <ellipse cx="100" cy="55" rx="80" ry="30" fill="rgba(255,95,191,0.04)"/>
+          </svg>
         </div>
+        <div class="gallery-caption">Main hall — 10 stations</div>
       </div>
 
-      <!-- Card 2 – Printer -->
-      <div class="gallery-card gc-pink">
-        <img src="images/printer.png" alt="Printer">
-
-        <div class="gallery-caption">
-        Printer and Scanner — Epson EcoTank L3250
+      <!-- Card 2 – VIP Booths -->
+      <div class="gallery-card gc-purple">
+        <div class="gallery-card-art">
+          <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+            <!-- booth left -->
+            <rect x="18" y="25" width="70" height="90" rx="6" fill="none" stroke="rgba(185,103,255,0.45)" stroke-width="1.5"/>
+            <rect x="26" y="38" width="54" height="34" rx="3" fill="rgba(185,103,255,0.08)" stroke="rgba(185,103,255,0.3)" stroke-width="1"/>
+            <rect x="38" y="44" width="30" height="22" rx="2" fill="rgba(185,103,255,0.12)"/>
+            <!-- monitor glow -->
+            <ellipse cx="53" cy="55" rx="18" ry="12" fill="rgba(185,103,255,0.10)"/>
+            <text x="53" y="97" text-anchor="middle" fill="rgba(185,103,255,0.5)" font-size="8" font-family="Inter,sans-serif">VIP 01</text>
+            <!-- booth right -->
+            <rect x="112" y="25" width="70" height="90" rx="6" fill="none" stroke="rgba(185,103,255,0.45)" stroke-width="1.5"/>
+            <rect x="120" y="38" width="54" height="34" rx="3" fill="rgba(185,103,255,0.08)" stroke="rgba(185,103,255,0.3)" stroke-width="1"/>
+            <rect x="132" y="44" width="30" height="22" rx="2" fill="rgba(185,103,255,0.12)"/>
+            <ellipse cx="147" cy="55" rx="18" ry="12" fill="rgba(185,103,255,0.10)"/>
+            <text x="147" y="97" text-anchor="middle" fill="rgba(185,103,255,0.5)" font-size="8" font-family="Inter,sans-serif">VIP 02</text>
+            <!-- RTX badge -->
+            <rect x="76" y="62" width="48" height="16" rx="3" fill="rgba(185,103,255,0.14)" stroke="rgba(185,103,255,0.3)" stroke-width="1"/>
+            <text x="100" y="73" text-anchor="middle" fill="rgba(185,103,255,0.8)" font-size="7" font-family="Inter,sans-serif" font-weight="600">RTX 4060</text>
+            <!-- ambient -->
+            <ellipse cx="100" cy="70" rx="70" ry="35" fill="rgba(185,103,255,0.04)"/>
+          </svg>
         </div>
+        <div class="gallery-caption">VIP booths — RTX 4060</div>
       </div>
 
-      <!-- Card 3 –  Snack Counter -->
-      <div class="gallery-card gc-pink">
-        <img src="images/snack.png" alt="Snack Counter">
-
-        <div class="gallery-caption">
-        Snack Counter
+      <!-- Card 3 – Reception & Snack Counter -->
+      <div class="gallery-card gc-gold">
+        <div class="gallery-card-art">
+          <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+            <!-- counter top -->
+            <rect x="20" y="50" width="160" height="40" rx="5" fill="rgba(255,209,102,0.07)" stroke="rgba(255,209,102,0.35)" stroke-width="1.5"/>
+            <!-- monitor on counter -->
+            <rect x="32" y="30" width="36" height="24" rx="3" fill="rgba(255,209,102,0.08)" stroke="rgba(255,209,102,0.3)" stroke-width="1"/>
+            <rect x="46" y="54" width="8" height="6" rx="1" fill="rgba(255,209,102,0.15)"/>
+            <!-- fridge / shelves -->
+            <rect x="130" y="30" width="40" height="60" rx="4" fill="rgba(255,209,102,0.07)" stroke="rgba(255,209,102,0.3)" stroke-width="1"/>
+            <line x1="130" y1="50" x2="170" y2="50" stroke="rgba(255,209,102,0.2)" stroke-width="1"/>
+            <line x1="130" y1="68" x2="170" y2="68" stroke="rgba(255,209,102,0.2)" stroke-width="1"/>
+            <!-- snack items on shelves -->
+            <circle cx="142" cy="42" r="4" fill="rgba(255,209,102,0.25)"/>
+            <circle cx="153" cy="42" r="3.5" fill="rgba(255,95,191,0.2)"/>
+            <circle cx="163" cy="42" r="3" fill="rgba(185,103,255,0.2)"/>
+            <rect x="137" y="58" width="8" height="8" rx="1" fill="rgba(255,209,102,0.2)"/>
+            <rect x="149" y="58" width="8" height="8" rx="1" fill="rgba(255,95,191,0.15)"/>
+            <!-- printer small -->
+            <rect x="82" y="32" width="34" height="20" rx="3" fill="rgba(255,209,102,0.07)" stroke="rgba(255,209,102,0.25)" stroke-width="1"/>
+            <rect x="87" y="37" width="24" height="4" rx="1" fill="rgba(255,209,102,0.15)"/>
+            <!-- label -->
+            <text x="100" y="110" text-anchor="middle" fill="rgba(255,209,102,0.45)" font-size="7.5" font-family="Inter,sans-serif">Reception + Snacks</text>
+            <!-- ambient -->
+            <ellipse cx="100" cy="65" rx="70" ry="30" fill="rgba(255,209,102,0.04)"/>
+          </svg>
         </div>
+        <div class="gallery-caption">Reception &amp; snack counter</div>
       </div>
 
     </div>
